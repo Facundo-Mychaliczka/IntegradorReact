@@ -3,8 +3,6 @@ import { StyledButtonSubmit } from './SubmitButtonStyles'
 
 const SubmitButton = () => {
 
-    
-
   return (
     <StyledButtonSubmit  type='submit'>COMPRAR</StyledButtonSubmit>
   )

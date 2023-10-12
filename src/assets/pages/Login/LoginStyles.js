@@ -2,12 +2,18 @@ import {styled} from 'styled-components'
 
 export const LoginPageWrapper = styled.div `
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    height: 100%;
+    text-align: center;
     background-color: black;
+    height: 90vh;
 `
 
-export const StyledForm = styled.form `
+export const StyledForm = styled.div `
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 `

@@ -1,5 +1,5 @@
 import React from 'react'
-import { BuyError, BuyPageWrapper, CartBuyContainer, ErrorButton, FormContainer } from './BuyPageStyles'
+import { BuyError, BuyPageWrapper, BuyProductsContainer, CartBuyContainer, ErrorButton, FormContainer } from './BuyPageStyles'
 import { useSelector } from 'react-redux'
 import CartToBuy from './CartToBuy'
 import Form from '../../components/Form/Form'
@@ -25,12 +25,15 @@ const BuyPage = () => {
                             <Form/>
                             
                         </FormContainer>
+                        
                         <CartBuyContainer>
-                            {
-                                cartProducts.map((product) => {
-                                    return <CartToBuy key={product.id} {...product} />
-                                })
-                            }
+                            <BuyProductsContainer>
+                                {
+                                    cartProducts.map((product) => {
+                                        return <CartToBuy key={product.id} {...product} />
+                                    })
+                                }
+                            </BuyProductsContainer>
                             TOTAL: ${totalPrice}
                         </CartBuyContainer>
                 </>)

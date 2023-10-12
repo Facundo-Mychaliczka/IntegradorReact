@@ -17,8 +17,9 @@ const Header = () => {
 
   const totalCartProducts =  cartProducts.reduce((acc, item) => 
   (acc + item.quantity), 0)
-  
 
+  const currentUser = useSelector((state) => state.user.currentUser)
+  
   return (
     <>
     <HeaderStyled>
@@ -34,9 +35,14 @@ const Header = () => {
                   <StyledCartIcon src={CartIcon} />
                   <ProductsCartNumber>{totalCartProducts}</ProductsCartNumber>
                 </CartIcons>
-                <UserHeaderSection>
-                  <UserLink to={"/login"}>Iniciar Sesión</UserLink>
-                  <StyledUserIcon src={AccountIcon}/>
+                <UserHeaderSection>       
+                      {
+                        currentUser ?   
+                        // ${currentUser.nombre}
+                        <UserLink to={`/user`}>{currentUser.nombre}</UserLink>              
+                       :<UserLink to={"/login"}>Iniciar Sesión</UserLink>        
+                        }
+                 <StyledUserIcon src={AccountIcon}/>
                 </UserHeaderSection>
             </HeaderImgContainer>
         </HeaderContainer>

@@ -12,7 +12,7 @@ export const InputLabel = styled.label `
 
 `
 
-export const InputStyled = styled.input `
+export const InputStyled = (error) => styled.input `
     background-color: black;
     border: solid 1px;
     border-color: ${({error}) => (error ? 'red' : 'white')};

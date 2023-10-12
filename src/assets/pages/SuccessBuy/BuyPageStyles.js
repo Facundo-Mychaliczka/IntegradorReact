@@ -32,13 +32,19 @@ export const BuyPageWrapper = styled.div `
 `
 
 export const FormContainer = styled.div `
-
 `
+
 
 export const CartBuyContainer = styled.div `
     display: flex;
     flex-direction: column;
     text-align: center;
+`
+
+export const BuyProductsContainer = styled.div `
+    height: 70vh;
+    overflow: auto;
+    overflow-y: scroll;
 `
 
 export const CartProductContainer = styled.div `
