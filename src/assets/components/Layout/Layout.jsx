@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import LayoutWrapper from './LayoutsTYLES'
+import LayoutWrapper from './LayoutStyles'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import { useLocation } from 'react-router-dom'
