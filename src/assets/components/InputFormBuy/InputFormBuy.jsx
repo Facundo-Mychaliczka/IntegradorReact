@@ -3,15 +3,29 @@ import { ErrorMessageStyled, InputBox, InputLabel, InputStyled } from './InputFo
 import { ErrorMessage, Field } from 'formik'
 
 
-const InputFormBuy = ({label, type, name, isError }) => {
+const InputFormBuy = ({label, type, name }) => {
   return (
-    <InputBox>
+    <Field 
+    name={name}   
+    >
+    
+    {
+      ({field, form: {errors, touched}}) =>(
+        <InputBox>
+     
         <InputLabel >{label}</InputLabel>
-        <Field as={InputStyled} type={type} name={name} error={isError} id={label} />
 
+        <InputStyled
+                type={type} 
+                {...field} 
+                isError={errors[field.name] && touched[field.name]}/>
+        
         <ErrorMessage name={name} component={ErrorMessageStyled}/>
         {/* placeholder */}
-    </InputBox >
+      </InputBox >
+     )
+    }
+</Field>
   )
 }
 

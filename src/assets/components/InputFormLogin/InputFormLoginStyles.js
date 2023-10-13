@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 export const InputStyledLogin = styled.input `
     background-color: black;
     border: solid 1px;
-    border-color: ${({error}) => (error ? 'red' : 'white')};
+    border-color: ${({isError}) => (isError ? 'red' : 'white')};
     width: 300px;
     text-align: center;
 `

@@ -5,9 +5,7 @@ import { ErrorMessage, Field } from 'formik'
 const InputFormRegister = ({label,type, name}) => {
   return (
     <Field
-            name={name}>
-
-              
+            name={name}>    
           {
             ({field, form: {errors, touched}}) =>(
           <InputBoxRegister>

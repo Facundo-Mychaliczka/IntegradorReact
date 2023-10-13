@@ -15,30 +15,14 @@ const FormLogin = () => {
                 console.log(values);
                 resetForm();
             }}
-    >
-        
-        {({touched, errors}) => (
-            
+    >   
             <StyledFormLogin>
-                <InputFormLogin
-                    name='email'
-                    label='E-mail'
-                    type='email'
-                    isError={errors.email && touched.email}
-                />
-                <InputFormLogin
-                    name='password'
-                    label='Contraseña'
-                    type='password'
-                    isError={errors.password && touched.password}
-                />
+                <InputFormLogin name='email'label='E-mail'type='email'/>
+                <InputFormLogin name='password' label='Contraseña' type='password'/>
                 <LoginSubmitButton type='submit'>INGRESAR</LoginSubmitButton>
                 <StyledButton to={"/register"}>¿No tienes una cuenta?</StyledButton>
             </StyledFormLogin>
-
-        
-            )
-            }
+            
         
     </Formik>
   )

@@ -19,50 +19,15 @@ const Form = () => {
                     resetForm()
                  }}
         >
-
-            {({touched, errors}) => (
                 <StyledForm>
-                    <InputFormBuy 
-                        name='name' 
-                        label='Nombre' 
-                        type='text' 
-                        isError={errors.name && touched.name}                      
-                    />
-                    <InputFormBuy 
-                        name='lastName' 
-                        label='Apellido' 
-                        type='text' 
-                        isError={errors.lastName && touched.lastName}
-                    />
-                    <InputFormBuy 
-                        name='adress' 
-                        label='Direccion' 
-                        type='text'
-                        isError={errors.adress && touched.adress}                      
-                    />
-                    <InputFormBuy 
-                        name='adressNumber' 
-                        label='Numero de direccion' 
-                        type='number'
-                        isError={errors.adressNumber && touched.adressNumber}                        
-                    />
-                    <InputFormBuy 
-                        name='email' 
-                        label='Email' 
-                        type='email'
-                        isError={errors.email && touched.email}                       
-                    />
-                    <InputFormBuy 
-                        name='cellphone' 
-                        label='Telefono' 
-                        type='number'
-                        isError={errors.cellphone && touched.cellphone}                        
-                    />
+                    <InputFormBuy name='name' label='Nombre' type='text'/>
+                    <InputFormBuy name='lastName' label='Apellido'  type='text' />
+                    <InputFormBuy name='adress' label='Direccion' type='text' />
+                    <InputFormBuy name='adressNumber' label='Numero de direccion' type='number'/>
+                    <InputFormBuy name='email' label='Email' type='email' />
+                    <InputFormBuy name='cellphone' label='Telefono' type='number'/>
                     <SubmitButton />
                 </StyledForm>
-            )
-
-             }
         
         </Formik>
     </div>
