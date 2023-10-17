@@ -9,6 +9,7 @@ import Membership from './pages/Membership/Membership'
 import BuyPage from './pages/SuccessBuy/BuyPage'
 import Register from './pages/Register/Register'
 import UserProfile from './pages/User/UserProfile'
+import ProtectedRoute from '../assets/components/ProtectedRoute/ProtectedRoute'
 
 
 const AppRoutes = () => {
@@ -24,8 +25,18 @@ const AppRoutes = () => {
           <Route path='/login' element={<Login/>} />
           <Route path='/register' element={<Register/>}/>
           <Route path='/membership' element={<Membership/>}/>
-          <Route path='/BuyPage' element={<BuyPage/>}/>
           <Route path='/user' element={<UserProfile/>}/>
+
+
+          <Route
+          path='/BuyPage' 
+          element = {
+            <ProtectedRoute redirectTo="/login">
+              <BuyPage/>
+            </ProtectedRoute>
+          }
+          />
+          
           <Route path='*' element={<Error/>}/>
         </Routes>
       </Layout>

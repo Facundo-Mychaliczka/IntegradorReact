@@ -2,11 +2,13 @@ import React from 'react'
 import Logo from '../../images/Logos e icons/logoHeader.png'
 import { ContactUs, ContactUsDiv, FooterNav, FooterStyled, Privacy } from './FooterStyles'
 import { NavLinkStyled} from '../Header/HeaderStyles'
-import { NavLink } from 'react-router-dom'
+
+
 
 const Footer = () => {
   return (
     <>
+    
     <FooterStyled>
         <FooterNav>
             <img src={Logo} alt="" />
