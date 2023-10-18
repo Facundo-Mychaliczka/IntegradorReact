@@ -7,12 +7,19 @@ export const FooterStyled = styled.footer `
     background-color: grey;
     justify-content: space-evenly;
     padding: 20px 0px 20px 0px;
+    @media screen and ( max-width : 577px) {
+        flex-direction: column;
+    }
 `
 
 export const FooterNav =styled.div `
     display: flex;
     flex-direction: column;
 
+`
+
+export const FooterImage = styled.img `
+    
 `
 
 export const ContactUs = styled.div `

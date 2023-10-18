@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from '../../images/Logos e icons/logoHeader.png'
-import { ContactUs, ContactUsDiv, FooterNav, FooterStyled, Privacy } from './FooterStyles'
+import { ContactUs, ContactUsDiv, FooterImage, FooterNav, FooterStyled, Privacy } from './FooterStyles'
 import { NavLinkStyled} from '../Header/HeaderStyles'
 
 
@@ -11,7 +11,7 @@ const Footer = () => {
     
     <FooterStyled>
         <FooterNav>
-            <img src={Logo} alt="" />
+            <FooterImage src={Logo}/>
             <NavLinkStyled to="/">Home</NavLinkStyled>
             <NavLinkStyled to="/products">Productos</NavLinkStyled>
             <NavLinkStyled to="/membership">Membresía</NavLinkStyled>

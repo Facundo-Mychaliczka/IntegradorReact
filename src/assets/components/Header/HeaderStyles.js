@@ -18,6 +18,9 @@ import {styled} from "styled-components"
         width: 120px;
         max-width: 120px;
         cursor: pointer;
+        @media screen and ( max-width : 577px) {
+         display: none;
+        }
  `
 
  export const HeaderContainer = styled.div `
