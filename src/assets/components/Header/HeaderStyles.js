@@ -37,6 +37,9 @@ import {styled} from "styled-components"
     align-items: center;
     justify-content: center;
     gap: 15px;
+    @media screen and ( max-width : 577px) {
+      display: none;
+    }
  `
 
  export const NavLinkStyled = styled(NavLink) `
