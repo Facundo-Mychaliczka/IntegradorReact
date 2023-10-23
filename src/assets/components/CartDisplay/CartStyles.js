@@ -53,12 +53,20 @@ export const CartProductsContainer = styled.div `
     & img {
         width: 70px;
     }
+    @media screen and ( max-width : 557px) {
+        flex-direction: column;
+        align-items: center;
+    }
+    
 `
 
 export const CartProductDescription = styled.div `
     display: flex;
     gap: 20px;
     align-items: center;
+    @media screen and ( max-width : 557px) {
+        flex-direction: column;
+    }
 `
 
 export const CartButtonsContainer = styled.div `
