@@ -8,7 +8,7 @@ import CartCard from './CartCard'
 
 const Cart = () => {
 
-  const isHiddenCart = useSelector((state) => state.cart.hidden)
+  const isHiddenCart = useSelector((state) => state.cart.cartHidden)
 
   const cartProducts = useSelector((state) => state.cart.cartItems)
 

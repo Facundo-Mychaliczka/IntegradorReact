@@ -1,9 +1,10 @@
 import {createSlice} from '@reduxjs/toolkit'
-import { addQuantityItemToCart, deleteAllCartProducts, deleteItemFromCart, substractQuantityItemFromCart } from './cart-functions'
+import { addQuantityItemToCart, cartHiddenVerification, deleteAllCartProducts, deleteItemFromCart, menuHiddenVerification, substractQuantityItemFromCart } from './cart-functions'
 
 const INITIAL_STATE = {
     cartItems: [],
-    hidden: true,
+    cartHidden: true,
+    smallNavHidden: true,
 }
 
 const cartSlice = createSlice ({
@@ -41,13 +42,22 @@ const cartSlice = createSlice ({
                 cartItems: deleteAllCartProducts(state.cartItems),
             }
         },
-        // TOGGLE DE APERTURA Y CIERRE
+        // TOGGLE DE APERTURA Y CIERRE DEL CARRITO
         toggleHiddenCart: (state) => {
             return {
                 ...state,
-                hidden: !state.hidden,
+                cartHidden: cartHiddenVerification(state.cartHidden, state.smallNavHidden),
+                // cartHidden: !state.cartHidden
+            }
+        },
+        // TOGGLE DE APERTURA Y CIERRE DEL NAV DE SMALL DVCS
+        toggleHiddenNav: (state) => {
+            return {
+                ...state,
+                smallNavHidden: menuHiddenVerification(state.cartHidden, state.smallNavHidden),
             }
         }
+
     }
 })
 
@@ -56,7 +66,8 @@ export const {
     removeQuantityFromCart,
     removeFromCart,
     clearCart,
-    toggleHiddenCart
+    toggleHiddenCart,
+    toggleHiddenNav
 } = cartSlice.actions;
 
 export default cartSlice.reducer;

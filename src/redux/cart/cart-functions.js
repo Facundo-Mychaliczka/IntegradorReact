@@ -62,3 +62,24 @@ export const deleteAllCartProducts = (cartItems) => {
     }
 }
 
+export const cartHiddenVerification = (cartHidden, smallNavHidden) => {
+
+    if (smallNavHidden === true) {
+        return cartHidden = !cartHidden   
+    } else if(smallNavHidden === false){
+        return (cartHidden = false,
+        smallNavHidden = true
+        )
+    }
+}
+
+export const menuHiddenVerification = (cartHidden, smallNavHidden) => {
+    if (cartHidden === true) {
+        return smallNavHidden = !smallNavHidden   
+    } else if(cartHidden === false) {
+        return (
+            smallNavHidden = false,
+        cartHidden = true
+        )
+    }
+}

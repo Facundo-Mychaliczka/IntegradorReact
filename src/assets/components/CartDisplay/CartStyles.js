@@ -20,7 +20,6 @@ export const StyledCart = styled.div `
     border-radius: 2rem;
     max-height: 90%;
     gap: 10px;
-    
 `
 
 export const CartProducts = styled.div `

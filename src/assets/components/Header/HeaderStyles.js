@@ -12,8 +12,20 @@ import {styled} from "styled-components"
     padding: 0px 20px 10px 20px;
     z-index: 2;
     position: fixed;
-    @media screen and ( max-width : 577px) {
-      justify-content: flex-end;
+ `
+
+ export const MenuIcon = styled.img `
+   width: 50px;
+   height: 50px;
+   cursor: pointer;
+   transition: 0.5s;
+   border-radius: 2rem;
+   &:hover {
+      scale: 1.1;
+      background-color: orangered;
+   }
+   @media screen and ( min-width: 578px) {
+      display: none;
     }
  `
 
