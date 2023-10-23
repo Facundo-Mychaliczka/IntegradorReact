@@ -61,6 +61,9 @@ export const MembershipItemsWrapper = styled.div `
     display: flex;
     flex-direction: row;
     gap: 20px;
+    @media screen and ( max-width : 577px) {
+        flex-direction: column;
+    }
 `
 
 export const MembershipItems = styled.div `

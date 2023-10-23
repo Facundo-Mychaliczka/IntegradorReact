@@ -7,6 +7,9 @@ export const ProductsPageWrapper = styled.div `
     gap: 50px;
     width: 100%;
     background-color: black;
+    @media screen and ( max-width : 577px) {
+        flex-direction: column;
+    }
 `
 
 export const ProductsWrapper = styled.div `

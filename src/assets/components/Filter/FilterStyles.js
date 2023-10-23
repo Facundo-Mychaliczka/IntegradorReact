@@ -5,6 +5,11 @@ export const FilterContainer = styled.div `
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @media screen and ( max-width : 577px) {
+        flex-direction: row;
+        overflow-x: scroll;
+        padding: 20px;
+    }
 `
 
 export const FilterButton = styled.div `
@@ -37,4 +42,8 @@ export const FilterWrapper = styled.div  `
     gap: 20px;
     text-align: center;
     content: auto;
+    @media screen and ( max-width : 577px) {
+        flex-direction: row;
+        width: 95%;
+    }
 `
