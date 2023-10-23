@@ -6,6 +6,8 @@ export const InputBox = styled.div `
     display: flex;
     flex-direction: column;
     text-align: center;
+    justify-content: center;
+    align-items: center;
 `   
 
 export const InputLabel = styled.label `
@@ -16,8 +18,10 @@ export const InputStyled =  styled.input `
     background-color: black;
     border: solid 1px;
     border-color: ${({isError}) => isError ? 'red' : 'white'};
-    width: 300px;
     text-align: center;
+    @media screen and ( max-width : 577px) {
+     width: 60% ;
+    }
 `
 
 export const StyledButtonSubmit = styled.button `

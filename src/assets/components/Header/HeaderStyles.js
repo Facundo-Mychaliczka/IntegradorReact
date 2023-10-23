@@ -12,6 +12,9 @@ import {styled} from "styled-components"
     padding: 0px 20px 10px 20px;
     z-index: 2;
     position: fixed;
+    @media screen and ( max-width : 577px) {
+      justify-content: flex-end;
+    }
  `
 
  export const HeaderLogo = styled.img `

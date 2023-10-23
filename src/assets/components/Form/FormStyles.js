@@ -9,4 +9,5 @@ export const StyledForm = styled(Form)`
     justify-content: center;
     align-items: center;
     gap: 10px;
+    text-align: center;
 `

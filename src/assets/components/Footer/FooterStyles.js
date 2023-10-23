@@ -9,6 +9,9 @@ export const FooterStyled = styled.footer `
     padding: 20px 0px 20px 0px;
     @media screen and ( max-width : 577px) {
         flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
     }
 `
 

@@ -42,9 +42,17 @@ export const CartBuyContainer = styled.div `
 `
 
 export const BuyProductsContainer = styled.div `
+    display: flex;
+    flex-direction: column;
     height: 70vh;
     overflow: auto;
     overflow-y: scroll;
+    @media screen and ( max-width : 577px) {
+      flex-direction: row;
+      overflow-x: scroll;
+      width: 50vw;
+      overflow-y: hidden;
+    }
 `
 
 export const CartProductContainer = styled.div `
@@ -56,6 +64,9 @@ export const CartProductContainer = styled.div `
     gap: 10px;
     border: solid orangered;
     margin: 10px;
+    @media screen and ( max-width : 577px) {
+     flex-direction: column ;
+    }
 `
 
 export const ProductToBuyImage = styled.img `
