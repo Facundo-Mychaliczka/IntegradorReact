@@ -23,7 +23,7 @@ const Form = () => {
                     <InputFormBuy name='name' label='Nombre' type='text'/>
                     <InputFormBuy name='surname' label='Apellido'  type='text' />
                     <InputFormBuy name='adress' label='Direccion' type='text' />
-                    <InputFormBuy name='location' label='Ciudad' type='text'/>
+                    <InputFormBuy name='location' label='Ciudad' type='boolean'/>
                     <InputFormBuy name='cellphone' label='Telefono' type='number'/>
                     <SubmitButton />
                 </StyledForm>
