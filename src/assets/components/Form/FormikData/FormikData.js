@@ -16,11 +16,11 @@ const cellphoneValidation = /\d{10}$/;
 export const validationSchema = Yup.object({
     name: Yup.string()
         .required("Este campo es obligatorio."),
-    lastName: Yup.string()
+    surname: Yup.string()
         .required("Este campo es obligatorio."),
     adress: Yup.string("Este campo sólo requiere el nombre de calle.")
         .required("Este campo es obligatorio."),
-    adressNumber : Yup.number("este campo sólo requiere números.")
+    location : Yup.number("este campo sólo requiere números.")
         .required("Este campo es obligarotio."),
     email: Yup.string()
         .email("Este campo sólo requiere un e-mail")
