@@ -43,7 +43,7 @@ const Header = () => {
                       {
                         currentUser ?   
                         // ${currentUser.nombre}
-                        <UserLink to={`/user`}>{currentUser.nombre}</UserLink>              
+                        <UserLink to={`/user`}>{currentUser.token}</UserLink>              
                        :<UserLink to={"/login"}>Iniciar Sesión</UserLink>        
                         }
                  <StyledUserIcon src={AccountIcon}/>
