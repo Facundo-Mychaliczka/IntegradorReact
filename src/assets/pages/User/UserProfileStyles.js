@@ -35,3 +35,13 @@ export const LogOutButton = styled(Link) `
 export const LogOutIcon = styled.img `
     width: 30px;
 `
+
+export const VerifyButton = styled(Link) `
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    transition: 0.25;
+    &:hover{
+        scale: 1.1;
+    }
+`

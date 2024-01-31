@@ -1,8 +1,9 @@
 import React from 'react'
-import { LogOutButton, LogOutIcon, ProfileWrapper, UserProfileWrapper } from './UserProfileStyles'
+import { LogOutButton, LogOutIcon, ProfileWrapper, UserProfileWrapper, VerifyButton } from './UserProfileStyles'
 import { useDispatch, useSelector } from 'react-redux'
 import { logOut } from '../../../redux/user/userSlice'
 import { userRedirectUnLogued } from '../../../hooks/userRedirect'
+import { Link } from 'react-router-dom'
 
 const UserProfile = () => {
 
@@ -26,7 +27,7 @@ const UserProfile = () => {
                     {
                         currentUser.verified ?
                         <p>Ya estas verificado</p>
-                       :<p>Verificarse</p> 
+                       :<Link><VerifyButton>Verificarse</VerifyButton></Link> 
 
                     }
                 </h3>

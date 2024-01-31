@@ -26,6 +26,7 @@ const AppRoutes = () => {
           <Route path='/register' element={<Register/>}/>
           <Route path='/membership' element={<Membership/>}/>
           <Route path='/user' element={<UserProfile/>}/>
+          <Route path='/verify' element={""}/>
 
 
           <Route
