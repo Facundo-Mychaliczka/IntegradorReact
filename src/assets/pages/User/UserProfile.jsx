@@ -27,7 +27,7 @@ const UserProfile = () => {
                     {
                         currentUser.verified ?
                         <p>Ya estas verificado</p>
-                       :<Link><VerifyButton>Verificarse</VerifyButton></Link> 
+                       :<Link to="/verify"><VerifyButton>Verificarse</VerifyButton></Link>
 
                     }
                 </h3>
