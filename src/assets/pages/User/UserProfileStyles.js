@@ -40,8 +40,11 @@ export const VerifyButton = styled(Link) `
     cursor: pointer;
     justify-content: center;
     align-items: center;
+    border-radius: 2rem;
     transition: 0.25;
     &:hover{
         scale: 1.1;
+        color: orangered;
+        background-color: grey;
     }
 `
