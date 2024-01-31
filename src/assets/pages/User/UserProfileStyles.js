@@ -41,7 +41,7 @@ export const VerifyButton = styled(Link) `
     justify-content: center;
     align-items: center;
     border-radius: 2rem;
-    transition: 0.25;
+    transition: 0.25s;
     &:hover{
         scale: 1.1;
         color: orangered;
