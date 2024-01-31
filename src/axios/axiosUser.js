@@ -2,7 +2,7 @@ import axios from 'axios'
 
 
 
-const BASE_URL = 'https://nucbaz-api.vercel.app/'
+const BASE_URL = 'https://api-back-facundo-mychaliczka.vercel.app/'
 
 
 
@@ -34,3 +34,5 @@ export const loginUser = async (email, password) => {
         return alert(error.response.data.msg)
     }
 } 
+
+
