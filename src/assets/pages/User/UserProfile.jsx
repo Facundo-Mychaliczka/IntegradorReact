@@ -22,7 +22,10 @@ const UserProfile = () => {
                 }
                 <h3>Nombre: {currentUser.user.nombre}</h3>
                 <h3>E-Mail: {currentUser.user.email}</h3>
-                <h3>Mi id: {currentUser.token}</h3>
+                <h3>{currentUser.user.verified}?
+                    <p>Ya estas verificado</p>
+                   :<p>Verificarse</p> 
+                </h3>
             </ProfileWrapper>
             <LogOutButton to={"/"} onClick={() => dispatch(logOut())}>
                 <p>Log Out</p>
