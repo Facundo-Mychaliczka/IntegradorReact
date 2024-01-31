@@ -24,7 +24,7 @@ const UserProfile = () => {
                 <h3>E-Mail: {currentUser.email}</h3>
                 <h3> 
                     {
-                        currentUser.user.verified ?
+                        currentUser.verified ?
                         <p>Ya estas verificado</p>
                        :<p>Verificarse</p> 
 
