@@ -25,7 +25,7 @@ const FormRegister = () => {
                 actions.resetForm();
                 if (user) {
                     dispatch(setCurrentUser({
-                        ...user.usuario,
+                        ...user,
                     }))
                 }
             }}
