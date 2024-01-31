@@ -22,7 +22,7 @@ const UserProfile = () => {
                 }
                 <h3>Nombre: {currentUser.user.nombre}</h3>
                 <h3>E-Mail: {currentUser.user.email}</h3>
-                <h3>Mi id: {currentUser.user.uid}</h3>
+                <h3>Mi id: {currentUser.token}</h3>
             </ProfileWrapper>
             <LogOutButton to={"/"} onClick={() => dispatch(logOut())}>
                 <p>Log Out</p>
