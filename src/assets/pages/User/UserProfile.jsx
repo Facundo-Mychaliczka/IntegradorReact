@@ -20,9 +20,9 @@ const UserProfile = () => {
                     ? <img src={currentUser.img} alt="" srcset="" />                    
                     : <h3>Actualmente, no cuentas con foto de perfil</h3>
                 }
-                <h3>Nombre: {currentUser.nombre}</h3>
-                <h3>E-Mail: {currentUser.email}</h3>
-                <h3>Mi id: {currentUser.uid}</h3>
+                <h3>Nombre: {currentUser.user.nombre}</h3>
+                <h3>E-Mail: {currentUser.user.email}</h3>
+                <h3>Mi id: {currentUser.user.uid}</h3>
             </ProfileWrapper>
             <LogOutButton to={"/"} onClick={() => dispatch(logOut())}>
                 <p>Log Out</p>
