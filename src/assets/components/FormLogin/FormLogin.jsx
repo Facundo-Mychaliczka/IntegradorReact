@@ -23,7 +23,7 @@ const FormLogin = () => {
                 const user = await loginUser(values.email, values.password);
                 if (user) {
                   dispatch(setCurrentUser({
-                    ...user,
+                    ...user.user,
                     token: user.token
                   }))
                 }
