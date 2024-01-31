@@ -21,10 +21,9 @@ const Form = () => {
         >
                 <StyledForm>
                     <InputFormBuy name='name' label='Nombre' type='text'/>
-                    <InputFormBuy name='lastName' label='Apellido'  type='text' />
+                    <InputFormBuy name='surname' label='Apellido'  type='text' />
+                    <InputFormBuy name='location' label='Ciudad' type='number'/>
                     <InputFormBuy name='adress' label='Direccion' type='text' />
-                    <InputFormBuy name='adressNumber' label='Numero de direccion' type='number'/>
-                    <InputFormBuy name='email' label='Email' type='email' />
                     <InputFormBuy name='cellphone' label='Telefono' type='number'/>
                     <SubmitButton />
                 </StyledForm>
