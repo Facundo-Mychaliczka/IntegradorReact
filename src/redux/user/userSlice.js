@@ -13,7 +13,7 @@ const userSlice = createSlice({
         setCurrentUser: (state, action) => {
             return {
                 ...state,
-                currentUser: action.payload,
+                currentUser: action.payload.user,
             };
         },
         logOut: (state) => {
