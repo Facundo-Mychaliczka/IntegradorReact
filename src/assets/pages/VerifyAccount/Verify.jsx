@@ -1,8 +1,13 @@
 import React from 'react'
+import { VerifyBox, VerifyWrapper } from './VerifyStyles'
 
 const Verify = () => {
   return (
-    <div>Verify</div>
+    <VerifyWrapper>
+      <VerifyBox>
+        
+      </VerifyBox>
+    </VerifyWrapper>
   )
 }
 
