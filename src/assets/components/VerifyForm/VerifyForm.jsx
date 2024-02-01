@@ -13,15 +13,6 @@ const VerifyForm = () => {
 
   return (
     <Formik
-      initialValues={INITIAL_VALUES_VERIFY}
-      validationSchema={ValidationSchemaVerify}
-      onSubmit={async (values, actions) => {
-        const verified = await verifyAccount(values.code, values.email);
-        actions.resetForm();
-        if (verified) {
-          navigate("/")
-        }
-      }}
     >
         <StyledFormValidationCode>
           <InputFormVerify name="code" type="text" label="Código"/>
