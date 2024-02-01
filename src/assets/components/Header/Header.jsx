@@ -21,6 +21,7 @@ const Header = () => {
   (acc + item.quantity), 0)
 
   const currentUser = useSelector((state) => state.user.currentUser)
+
   
   return (
     <>
