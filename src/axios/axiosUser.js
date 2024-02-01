@@ -2,7 +2,7 @@ import axios from 'axios'
 
 
 
-const BASE_URL = 'https://api-back-five.vercel.app/'
+const BASE_URL = 'https://api-back-facundo-mychaliczka.vercel.app/'
 
 
 
