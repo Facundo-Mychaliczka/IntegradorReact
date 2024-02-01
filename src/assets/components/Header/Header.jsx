@@ -44,7 +44,7 @@ const Header = () => {
                         currentUser ?   
                         // ${currentUser.nombre}
                         <UserLink to={`/user`}>{currentUser.nombre}</UserLink>              
-                       :<UserLink to={"/login"}>Iniciar Sesión</UserLink>        
+                       :<UserLink to={"/login"}>Iniciar Sesión</UserLink>
                         }
                  <StyledUserIcon src={AccountIcon}/>
                 </UserHeaderSection>
