@@ -3,7 +3,6 @@ import { LogOutButton, LogOutIcon, ProfileWrapper, UserProfileWrapper, VerifyBut
 import { useDispatch, useSelector } from 'react-redux'
 import { logOut } from '../../../redux/user/userSlice'
 import { userRedirectUnLogued } from '../../../hooks/userRedirect'
-import { Link } from 'react-router-dom'
 
 const UserProfile = () => {
 
