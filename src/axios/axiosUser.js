@@ -2,7 +2,7 @@ import axios from 'axios'
 
 
 
-const BASE_URL = 'https://nucbaz-api.vercel.app/'
+const BASE_URL = 'https://api-back-five.vercel.app/'
 
 
 
