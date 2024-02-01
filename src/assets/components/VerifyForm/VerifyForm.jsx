@@ -1,11 +1,11 @@
 import { Formik } from 'formik'
 import React from 'react'
-import {VerifyFormValidationCode} from "./VerifyFormStyles"
+import {StyledFormValidationCode} from "./VerifyFormStyles"
 
 const VerifyForm = () => {
   return (
     <Formik>
-        <VerifyFormValidationCode></VerifyFormValidationCode>
+        <StyledFormValidationCode></StyledFormValidationCode>
     </Formik>
   )
 }
