@@ -9,6 +9,7 @@ import Membership from './pages/Membership/Membership'
 import BuyPage from './pages/SuccessBuy/BuyPage'
 import Register from './pages/Register/Register'
 import UserProfile from './pages/User/UserProfile'
+import Verify from "./pages/VerifyAccount/Verify"
 import ProtectedRoute from '../assets/components/ProtectedRoute/ProtectedRoute'
 
 
@@ -26,7 +27,7 @@ const AppRoutes = () => {
           <Route path='/register' element={<Register/>}/>
           <Route path='/membership' element={<Membership/>}/>
           <Route path='/user' element={<UserProfile/>}/>
-          <Route path='/verify' element={""}/>
+          <Route path='/verify' element={<Verify/>}/>
 
 
           <Route
