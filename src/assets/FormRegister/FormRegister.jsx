@@ -26,6 +26,7 @@ const FormRegister = () => {
                 if (user) {
                     dispatch(setCurrentUser({
                         ...user.user,
+                        token: user.token
                     }))
                 }
             }}
