@@ -17,7 +17,7 @@ const VerifyForm = () => {
       validationSchema={ValidationSchemaVerify}
       onSubmit={async (values, actions) => {
         const verified = await verifyAccount(values.code, values.email);
-        actions.reseyForm();
+        actions.resetForm();
         if (verified) {
           navigate("/")
         }
