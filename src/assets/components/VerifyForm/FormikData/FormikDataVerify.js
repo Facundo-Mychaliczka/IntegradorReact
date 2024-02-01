@@ -1,6 +1,6 @@
 import * as Yup from "yup"
 
-export const INTITIAL_VALUES_VERIFY = {
+export const INITIAL_VALUES_VERIFY = {
     code: ""
 }
 
