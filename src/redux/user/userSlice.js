@@ -8,9 +8,7 @@ const INITIAL_STATE = {
 
 const userSlice = createSlice({
     name: "user",
-    initialState: {
-        currentUser: null
-    },
+    initialState: INITIAL_STATE,
     reducers: {
         setCurrentUser: (state, action) => {
             return {
