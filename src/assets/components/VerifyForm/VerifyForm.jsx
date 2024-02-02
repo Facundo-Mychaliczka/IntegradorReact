@@ -22,11 +22,11 @@ const VerifyForm = () => {
 
       onSubmit={async (values, actions) => {
         const verified = await verifyAccount(userEmail,values.code);
-        console.log(verified.verified);
+        userVerify = verified.verified
         actions.resetForm();
-        // if (verified) {
-        //   navigate("/")
-        // }
+        if (verified) {
+          navigate("/")
+        }
       }}
     >
         <StyledFormValidationCode>
