@@ -1,6 +1,7 @@
 import { Field } from 'formik'
 import React from 'react'
 import { ErrorMessageVerify } from './InputFormVerifyStyles'
+import { InputBoxRegister } from '../../../FormRegister/Input/InputFormRegisterStyles'
 
 const InputFormVerify = ({label, type, name}) => {
   return (
