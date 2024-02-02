@@ -9,19 +9,19 @@ import { useNavigate } from "react-router-dom"
 
 const VerifyForm = () => {
 
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
 
   return (
     <Formik
-      // initialValues={INITIAL_VALUES_VERIFY}
-      // validationSchema={ValidationSchemaVerify}
-      // onSubmit={async (values, actions) => {
-      //   const verified = await verifyAccount(values.code, values.email);
-      //   actions.resetForm();
-      //   if (verified) {
-      //     navigate("/")
-      //   }
-      // }}
+      initialValues={INITIAL_VALUES_VERIFY}
+      validationSchema={ValidationSchemaVerify}
+      onSubmit={async (values, actions) => {
+        const verified = await verifyAccount(values.code);
+        actions.resetForm();
+        if (verified) {
+          navigate("/")
+        }
+      }}
     >
         <StyledFormValidationCode>
           <InputFormVerify name="code" type="text" label="Código"/>

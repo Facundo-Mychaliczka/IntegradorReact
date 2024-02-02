@@ -2,11 +2,10 @@ import axios from "axios"
 
 const BASE_URL = 'https://api-back-facundo-mychaliczka.vercel.app/'
 
-export const verifyAccount = async (email, code)=> {
+export const verifyAccount = async (code)=> {
 
     try {
         const response = await axios.patch(`${BASE_URL}auth/verify`, {
-            email,
             code
         })
         console.log(response.data);
