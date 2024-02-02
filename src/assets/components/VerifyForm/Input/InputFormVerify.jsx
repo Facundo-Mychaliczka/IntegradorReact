@@ -1,7 +1,8 @@
 import { Field } from 'formik'
 import React from 'react'
-import { ErrorMessageVerify } from './InputFormVerifyStyles'
-import { InputBoxRegister } from '../../../FormRegister/Input/InputFormRegisterStyles'
+import { ErrorMessageVerify, InputBoxVerify, InputVerify } from './InputFormVerifyStyles'
+import { LabelStyled } from '../../../FormRegister/Input/InputFormRegisterStyles'
+
 
 const InputFormVerify = ({label, type, name}) => {
   return (
@@ -9,17 +10,17 @@ const InputFormVerify = ({label, type, name}) => {
             name={name}>    
           {
             ({field, form: {errors, touched}}) =>(
-          <InputBoxRegister>
+          <InputBoxVerify>
 
           <LabelStyled >{label}</LabelStyled>
 
-          <InputRegister type={type} 
+          <InputVerify type={type} 
                 {...field} 
                 isError={errors[field.name] && touched[field.name]} 
                 />
 
           <ErrorMessage name={name} component={ErrorMessageVerify}/>
-          </InputBoxRegister>
+          </InputBoxVerify>
             )
           }
        
