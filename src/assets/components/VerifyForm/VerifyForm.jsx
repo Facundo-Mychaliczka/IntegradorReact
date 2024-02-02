@@ -10,6 +10,7 @@ const VerifyForm = () => {
     <Formik
     >
         <StyledFormValidationCode>
+          <InputFormVerify name="code" type="text" label="Código"/>
           
         </StyledFormValidationCode>
     </Formik>
