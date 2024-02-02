@@ -1,8 +1,9 @@
 import React from 'react'
+import { SubmitVerifyButton } from './SubmitButtonVerifyStyles'
 
 const SubmitButtonVerify = () => {
   return (
-    <SubmitButtonVerify type="submit" > VERIFICARSE </SubmitButtonVerify>
+    <SubmitVerifyButton type="submit" > VERIFICARSE </SubmitVerifyButton>
   )
 }
 
