@@ -6,7 +6,7 @@ const Verify = () => {
   return (
     <VerifyWrapper>
       <VerifyBox>
-        
+        <VerifyForm/>
       </VerifyBox>
     </VerifyWrapper>
   )
