@@ -12,6 +12,7 @@ const VerifyForm = () => {
 
   const navigate = useNavigate()
   const userEmail = useSelector((state) => state.user.currentUser.email)
+  const userVerify = useSelector((state) => state.user.currentUser.state)
 
   return (
     <Formik
@@ -21,6 +22,7 @@ const VerifyForm = () => {
 
       onSubmit={async (values, actions) => {
         const verified = await verifyAccount(userEmail,values.code);
+        userVerify = verified.verified
         actions.resetForm();
         if (verified) {
           navigate("/")
