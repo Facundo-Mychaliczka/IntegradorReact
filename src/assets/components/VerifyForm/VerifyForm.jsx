@@ -20,7 +20,7 @@ const VerifyForm = () => {
       
 
       onSubmit={async (values, actions) => {
-        const verified = await verifyAccount(values.code, userEmail);
+        const verified = await verifyAccount(userEmail,values.code);
         actions.resetForm();
         if (verified) {
           navigate("/")
