@@ -19,7 +19,7 @@ const InputFormVerify = ({label, type, name}) => {
                 isError={errors[field.name] && touched[field.name]} 
                 />
 
-          <ErrorMessage name={name} component={ErrorMessageVerify}/>
+          <ErrorMessageVerify name={name} component={ErrorMessageVerify}/>
           </InputBoxVerify>
             )
           }
