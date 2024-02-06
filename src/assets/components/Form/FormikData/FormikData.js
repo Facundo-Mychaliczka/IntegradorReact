@@ -4,7 +4,7 @@ import * as Yup from 'yup'
 export const INITIAL_VALUES_FORMIK = {
             name: '',
             surname: '',
-            adress: '',
+            address: '',
             location: '',
             cellphone: ''
 }
@@ -17,7 +17,7 @@ export const validationSchema = Yup.object({
         .required("Este campo es obligatorio."),
     surname: Yup.string()
         .required("Este campo es obligatorio."),
-    adress: Yup.string("Este campo sólo requiere el nombre de calle.")
+    address: Yup.string()
         .required("Este campo es obligatorio."),
     location : Yup.string("este campo sólo requiere números.")
         .required("Este campo es obligarotio."),

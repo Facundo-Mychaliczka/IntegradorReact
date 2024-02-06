@@ -23,6 +23,7 @@ const Form = () => {
             return (acc + product.value * product.quantity)
           }, 0)
           const shippingDetails = values
+          console.log(shippingDetails);
           const items = cartProducts
           const order = {price, shippingDetails, items}
           await postOrder(order, currentUser)
