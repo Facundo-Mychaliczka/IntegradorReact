@@ -11,6 +11,7 @@ import Register from './pages/Register/Register'
 import UserProfile from './pages/User/UserProfile'
 import Verify from "./pages/VerifyAccount/Verify"
 import ProtectedRoute from '../assets/components/ProtectedRoute/ProtectedRoute'
+import Orders from './pages/Orders/Orders'
 
 
 const AppRoutes = () => {
@@ -28,6 +29,7 @@ const AppRoutes = () => {
           <Route path='/membership' element={<Membership/>}/>
           <Route path='/user' element={<UserProfile/>}/>
           <Route path='/verify' element={<Verify/>}/>
+          <Route path='/myOrders' element={<Orders/>}/>
 
 
           <Route
