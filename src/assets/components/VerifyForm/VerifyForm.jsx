@@ -6,14 +6,13 @@ import { INITIAL_VALUES_VERIFY,ValidationSchemaVerify } from './FormikData/Formi
 import {verifyAccount} from "../../../axios/axiosVerify.js"
 import SubmitButtonVerify from "./Button/SubmitButtonVerify"
 import { useNavigate } from "react-router-dom"
-import { useDispatch, useSelector } from 'react-redux'
-import { setCurrentUser } from '../../../redux/user/userSlice.js'
+import { useSelector } from 'react-redux'
 
 const VerifyForm = () => {
 
   const navigate = useNavigate()
   const userEmail = useSelector((state) => state.user.currentUser.email)
-  const dispatch = useDispatch()
+  const userVerify = useSelector((state) => state.user.currentUser.verified)
 
   return (
     <Formik
