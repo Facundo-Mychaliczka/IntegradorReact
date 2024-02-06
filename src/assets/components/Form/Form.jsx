@@ -11,7 +11,11 @@ import { postOrder } from '../../../axios/axiosOrders'
 const Form = () => {
   const currentUser = useSelector((state) => state.user.currentUser)
   const cartProducts = useSelector((state) => state.cart.cartItems)
+  const price = cartProducts.reduce((acc, product) => {
+            return (acc + product.value * product.quantity)
+          }, 0)
 
+  const items = cartProducts
   return (
     <div>
         <h1>COMPLETA TU COMPRA</h1>
@@ -19,11 +23,9 @@ const Form = () => {
         initialValues={INITIAL_VALUES_FORMIK}
         validationSchema={validationSchema}
         onSubmit= {async (values) => {
-          const price = cartProducts.reduce((acc, product) => {
-            return (acc + product.value * product.quantity)
-          }, 0)
+          
           const shippingDetails = values
-          const items = cartProducts
+          
           const order = {price, shippingDetails, items}
           await postOrder(order, currentUser)
           
