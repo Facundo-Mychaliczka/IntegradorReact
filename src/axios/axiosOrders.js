@@ -5,7 +5,7 @@ const BASE_URL = 'https://api-back-facundo-mychaliczka.vercel.app/'
 export const postOrder = async (order, currentUser)=> {
 
     try {
-        const response = await axios.post(`${BASE_URL}orders`, {order}, {
+        const response = await axios.post(`${BASE_URL}orders`, order, {
             headers: {
                 "xtoken": currentUser.token
             },
