@@ -31,7 +31,7 @@ const ProductsPage = () => {
                 {
                 Object.entries(products).map(([, productsArray]) => {
                     return productsArray.map((product) => {
-                        const {id, image, name, value} = product
+                        const {id, image, name, value, garantía} = product
                         return <ProductCard key={id}>
                             <p>{name}</p>
                             <img src={image} alt="" />
