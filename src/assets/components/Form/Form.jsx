@@ -17,7 +17,10 @@ const Form = () => {
         <Formik
         initialValues={INITIAL_VALUES_FORMIK}
         validationSchema={validationSchema}
-        onSubmit= {console.log(values)}
+        onSubmit= { (values) => {
+          console.log(values);
+          
+      }}
         >
                 <StyledForm>
                     <InputFormBuy name='name' label='Nombre' type='text'/>
