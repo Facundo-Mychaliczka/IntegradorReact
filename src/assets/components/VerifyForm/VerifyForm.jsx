@@ -23,7 +23,7 @@ const VerifyForm = () => {
         const verified = await verifyAccount(userEmail,values.code);
         actions.resetForm();
         if (verified) {
-          return (alert(verified.msg + "Por favor, lalala "),
+          return (alert(verified.msg + "Por favor, vuelva a iniciar sesión para acceder a las características de verificados."),
           navigate("/")
           )
           
