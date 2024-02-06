@@ -10,6 +10,7 @@ import { postOrder } from '../../../axios/axiosOrders'
 
 const Form = () => {
   const currentUser = useSelector((state) => state.user.currentUser)
+  const cartProducts = useSelector((state) => state.cart.cartItems)
 
   return (
     <div>
@@ -18,8 +19,13 @@ const Form = () => {
         initialValues={INITIAL_VALUES_FORMIK}
         validationSchema={validationSchema}
         onSubmit= { (values) => {
+          const totalPrice = cartProducts.reduce((acc, product) => {
+            return (acc + product.value * product.quantity)
+          }, 0)
           const shippingDetails = values
-          console.log(shippingDetails);
+          const items = cartProducts
+          const order = {totalPrice, shippingDetails, items}
+          console.log(order, currentUser.token);
           
       }}
         >
