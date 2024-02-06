@@ -7,7 +7,7 @@ import Form from '../../components/Form/Form'
 const BuyPage = () => {
 
     const cartProducts = useSelector((state) => state.cart.cartItems)
-    const isVerfiedUser = useSelector((state) => state.user.currentUser.verified)
+    const currentUser = useSelector((state) => state.user.currentUser)
 
     
 
@@ -23,7 +23,7 @@ const BuyPage = () => {
                  <>
                         <FormContainer>
                             {
-                                isVerifiedUser ? 
+                                currentUser.verified ? 
                                 <Form/>
                                 : <p>Debes verificar tu cuenta antes de poder completar una compra.</p>
                             }
