@@ -4,9 +4,12 @@ import { StyledForm } from './FormStyles'
 import {Formik} from 'formik'
 import SubmitButton from './SubmitButton/SubmitButton'
 import { INITIAL_VALUES_FORMIK, validationSchema } from './FormikData/FormikData'
+import { useSelector } from 'react-redux'
+import { postOrder } from '../../../axios/axiosOrders'
 
 
 const Form = () => {
+  const currentUser = useSelector((state) => state.user.currentUser)
 
   return (
     <div>
@@ -14,10 +17,7 @@ const Form = () => {
         <Formik
         initialValues={INITIAL_VALUES_FORMIK}
         validationSchema={validationSchema}
-        onSubmit= {(values, {resetForm}) => {
-                    console.log(values);
-                    resetForm()
-                 }}
+        onSubmit= {console.log(values)}
         >
                 <StyledForm>
                     <InputFormBuy name='name' label='Nombre' type='text'/>

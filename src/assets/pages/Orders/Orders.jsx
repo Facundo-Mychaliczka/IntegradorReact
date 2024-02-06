@@ -1,8 +1,12 @@
 import React from 'react'
+import { OrdersWrapper } from './OrdersStyles'
 
 const Orders = () => {
+    
   return (
-    <div>Orders</div>
+    <OrdersWrapper>
+        
+    </OrdersWrapper>
   )
 }
 

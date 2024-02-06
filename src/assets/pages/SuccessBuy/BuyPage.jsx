@@ -15,6 +15,7 @@ const BuyPage = () => {
         return (acc + product.value * product.quantity)
       }, 0)
 
+      
   return (
     <BuyPageWrapper>
         {
