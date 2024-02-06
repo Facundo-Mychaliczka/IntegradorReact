@@ -10,7 +10,7 @@ export const postOrder = async (order, currentUser)=> {
                 "xtoken": currentUser.token
             },
         })
-        return response.data
+        return console.log(response);
     } catch (error) {
         return alert (error.response.data.msg)
     }
