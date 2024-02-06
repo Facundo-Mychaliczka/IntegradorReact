@@ -3,10 +3,9 @@ import * as Yup from 'yup'
 
 export const INITIAL_VALUES_FORMIK = {
             name: '',
-            lastName: '',
+            surname: '',
             adress: '',
-            adressNumber: '',
-            email: '',
+            location: '',
             cellphone: ''
 }
 
