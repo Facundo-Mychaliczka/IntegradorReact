@@ -18,7 +18,8 @@ const Form = () => {
         initialValues={INITIAL_VALUES_FORMIK}
         validationSchema={validationSchema}
         onSubmit= { (values) => {
-          console.log(values);
+          const shippingDetails = values
+          console.log(shippingDetails);
           
       }}
         >
