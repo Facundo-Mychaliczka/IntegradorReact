@@ -18,14 +18,14 @@ const Form = () => {
         <Formik
         initialValues={INITIAL_VALUES_FORMIK}
         validationSchema={validationSchema}
-        onSubmit= { (values) => {
-          const totalPrice = cartProducts.reduce((acc, product) => {
+        onSubmit= {async (values) => {
+          const price = cartProducts.reduce((acc, product) => {
             return (acc + product.value * product.quantity)
           }, 0)
           const shippingDetails = values
           const items = cartProducts
-          const order = {totalPrice, shippingDetails, items}
-          console.log(order, currentUser.token);
+          const order = {price, shippingDetails, items}
+          await postOrder(order, currentUser)
           
       }}
         >
