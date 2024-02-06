@@ -4,11 +4,13 @@ import { StyledForm } from './FormStyles'
 import {Formik} from 'formik'
 import SubmitButton from './SubmitButton/SubmitButton'
 import { INITIAL_VALUES_FORMIK, validationSchema } from './FormikData/FormikData'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { postOrder } from '../../../axios/axiosOrders'
+import { resetCart } from '../../../redux/cart/cartSlice'
 
 
 const Form = () => {
+  const dispatch = useDispatch()
   const currentUser = useSelector((state) => state.user.currentUser)
   const cartProducts = useSelector((state) => state.cart.cartItems)
   const price = cartProducts.reduce((acc, product) => {
@@ -22,12 +24,14 @@ const Form = () => {
         <Formik
         initialValues={INITIAL_VALUES_FORMIK}
         validationSchema={validationSchema}
-        onSubmit= {async (values) => {
+        onSubmit= {async (values, actions) => {
           
           const shippingDetails = values
           
           const order = {price, shippingDetails, items}
           await postOrder(order, currentUser)
+          actions.resetForm()
+          dispatch(resetCart())
           
       }}
         >

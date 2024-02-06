@@ -62,6 +62,7 @@ export const deleteAllCartProducts = (cartItems) => {
     }
 }
 
+
 export const cartHiddenVerification = (cartHidden, smallNavHidden) => {
 
     if (smallNavHidden === true) {

@@ -1,5 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit'
-import { addQuantityItemToCart, cartHiddenVerification, deleteAllCartProducts, deleteItemFromCart, menuHiddenVerification, substractQuantityItemFromCart } from './cart-functions'
+import { addQuantityItemToCart, cartHiddenVerification, deleteAllCartProducts, deleteItemFromCart, menuHiddenVerification, resetAllCartProducts, substractQuantityItemFromCart } from './cart-functions'
 
 const INITIAL_STATE = {
     cartItems: [],
@@ -42,6 +42,15 @@ const cartSlice = createSlice ({
                 cartItems: deleteAllCartProducts(state.cartItems),
             }
         },
+        // RESETEAR EL CARRITO
+        resetCart: (state) => {
+            return {
+                ...state,
+                cartItems: []
+            }
+        },
+
+
         // TOGGLE DE APERTURA Y CIERRE DEL CARRITO
         toggleHiddenCart: (state) => {
             return {
@@ -67,7 +76,8 @@ export const {
     removeFromCart,
     clearCart,
     toggleHiddenCart,
-    toggleHiddenNav
+    toggleHiddenNav,
+    resetCart
 } = cartSlice.actions;
 
 export default cartSlice.reducer;
