@@ -26,9 +26,6 @@ const VerifyForm = () => {
         userVerify = verified.verified
         actions.resetForm();
         if (verified) {
-          dispatch(setCurrentUser(
-            ...user.user,
-          ))
           navigate("/")
         }
       }}
