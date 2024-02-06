@@ -16,16 +16,16 @@ export const postOrder = async (order, currentUser)=> {
     }
 }
 
-export const getOrders = async (currentUser)=> {
+// export const getOrders = async (currentUser)=> {
 
-    try {
-        const orders = await axios.get(`${BASE_URL}orders`,{
-            headers: {
-                "xtoken": currentUser.token
-            },
-        })
-        return response.data
-    } catch (error) {
-        return alert (error.response.data.msg)
-    }
-}
+//     try {
+//         const orders = await axios.get(`${BASE_URL}orders`,{
+//             headers: {
+//                 "xtoken": currentUser.token
+//             },
+//         })
+//         return response.data
+//     } catch (error) {
+//         return alert (error.response.data.msg)
+//     }
+// }
