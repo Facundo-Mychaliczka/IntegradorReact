@@ -36,7 +36,7 @@ const ProductsPage = () => {
                             <p>{name}</p>
                             <img src={image} alt="" />
                             <p>${value} USD</p>
-                            <AddBtn onClick={() => dispatch(addQuantityToCart({id, image, name, value}))}>Añadir al carrito</AddBtn>
+                            <AddBtn onClick={() => dispatch(addQuantityToCart({id, image, name, value, garantía}))}>Añadir al carrito</AddBtn>
                         </ProductCard>
                     })
                 })
