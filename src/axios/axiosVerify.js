@@ -9,7 +9,6 @@ export const verifyAccount = async (email, code)=> {
             email,
             code
         })
-        console.log(response.data);
         return response.data
     } catch (error) {
         return alert (error.response.data.msg)
