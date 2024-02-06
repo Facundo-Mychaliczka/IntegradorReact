@@ -12,7 +12,7 @@ const VerifyForm = () => {
 
   const navigate = useNavigate()
   const userEmail = useSelector((state) => state.user.currentUser.email)
-  const userVerify = useSelector((state) => state.user.currentUser.state)
+  const userVerify = useSelector((state) => state.user.currentUser.verified)
 
   return (
     <Formik
