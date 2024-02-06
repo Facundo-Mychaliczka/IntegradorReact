@@ -25,7 +25,7 @@ const userSlice = createSlice({
         setVerify: (state, action) => {
             return {
                 ...state,
-                verified: action.payload,
+                currentUser: action.payload,
             }
         }
     }
