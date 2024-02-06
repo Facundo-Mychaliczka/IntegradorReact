@@ -12,7 +12,7 @@ export const postOrder = async (order, currentUser)=> {
         })
         return console.log(response);
     } catch (error) {
-        return alert (error.response.data.msg)
+        return alert (error.response.msg)
     }
 }
 
