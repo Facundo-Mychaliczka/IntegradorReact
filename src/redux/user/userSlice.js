@@ -22,15 +22,9 @@ const userSlice = createSlice({
                 currentUser: null,
             }
         },
-        setVerify: (state, action) => {
-            return {
-                ...state,
-                currentUser: action.payload,
-            }
-        }
     }
 })
 
-export const {setCurrentUser, logOut, setVerify} = userSlice.actions
+export const {setCurrentUser, logOut} = userSlice.actions
 
 export default userSlice.reducer;
