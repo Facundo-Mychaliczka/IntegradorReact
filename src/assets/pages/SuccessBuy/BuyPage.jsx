@@ -25,7 +25,7 @@ const BuyPage = () => {
                             {
                                 currentUser.verified ? 
                                 <Form/>
-                                : <p>Debes verificar tu cuenta antes de poder completar una compra.</p>
+                                : <h1>Debes verificar tu cuenta antes de poder completar una compra.</h1>
                             }
 
                             
