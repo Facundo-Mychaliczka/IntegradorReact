@@ -8,7 +8,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { postOrder } from '../../../axios/axiosOrders'
 import { resetCart } from '../../../redux/cart/cartSlice'
 import { userRedirect } from '../../../hooks/userRedirect'
-import { useNavigate } from 'react-router-dom'
 
 
 
@@ -34,14 +33,9 @@ const Form = () => {
           const shippingDetails = values
           
           const order = {price, shippingDetails, items}
-          try {
-            await postOrder(order, currentUser)
+          await postOrder(order, currentUser)
           actions.resetForm()
           dispatch(resetCart())
-          useNavigate("/congratulations")
-          } catch (error) {
-            alert (error)
-          }
           
       }}
         >
