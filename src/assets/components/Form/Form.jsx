@@ -7,7 +7,10 @@ import { INITIAL_VALUES_FORMIK, validationSchema } from './FormikData/FormikData
 import { useDispatch, useSelector } from 'react-redux'
 import { postOrder } from '../../../axios/axiosOrders'
 import { resetCart } from '../../../redux/cart/cartSlice'
-import { Link } from 'react-router-dom'
+import { userRedirect } from '../../../hooks/userRedirect'
+import { useNavigate } from 'react-router-dom'
+
+
 
 const Form = () => {
   const dispatch = useDispatch()
@@ -34,7 +37,7 @@ const Form = () => {
           await postOrder(order, currentUser)
           actions.resetForm()
           dispatch(resetCart())
-          
+          useNavigate("/congratulations")
       }}
         >
                 <StyledForm>
@@ -43,7 +46,7 @@ const Form = () => {
                     <InputFormBuy name='location' label='Ciudad' type='text'/>
                     <InputFormBuy name='address' label='Direccion' type='text' />
                     <InputFormBuy name='cellphone' label='Telefono' type='number'/>
-                   <Link to={"/congratulations"}> <SubmitButton /></Link>
+                    <SubmitButton />
                 </StyledForm>
         
         </Formik>
