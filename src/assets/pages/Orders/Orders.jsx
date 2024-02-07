@@ -3,9 +3,9 @@ import { OrdersWrapper } from './OrdersStyles'
 import { getOrders } from '../../../axios/axiosOrders'
 import { useSelector } from 'react-redux'
 
-const Orders =  () => {
+const Orders = () => {
   const currentUser = useSelector((state) => state.user.currentUser)
-   const orders =  getOrders(currentUser)
+   const orders = async () => await getOrders(currentUser)
    console.log(orders);
   return (
     <OrdersWrapper>
