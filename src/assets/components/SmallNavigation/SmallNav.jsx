@@ -15,6 +15,7 @@ const SmallNav = () => {
                 <NavLinkStyledNav onClick={() => dispatch(toggleHiddenNav())} to="/">Home</NavLinkStyledNav>
                 <NavLinkStyledNav onClick={() => dispatch(toggleHiddenNav())} to="/products">Productos</NavLinkStyledNav>
                 <NavLinkStyledNav onClick={() => dispatch(toggleHiddenNav())} to="/membership">Membresía</NavLinkStyledNav>
+                <NavLinkStyledNav onClick={() => dispatch(toggleHiddenNav())} to="/myOrders">Mis Órdenes</NavLinkStyledNav>
             </StyledOlNav>
     </StyledNav>
   )

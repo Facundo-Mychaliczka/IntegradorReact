@@ -13,3 +13,8 @@ export const OrdersWrapper = styled.div `
     height: 90vh;
     background-color: black;
 `
+
+export const OrderContainer = styled.div `
+    padding-top: 10px;
+    border-color: grey;
+`

@@ -12,7 +12,7 @@ import UserProfile from './pages/User/UserProfile'
 import Verify from "./pages/VerifyAccount/Verify"
 import ProtectedRoute from '../assets/components/ProtectedRoute/ProtectedRoute'
 import Orders from './pages/Orders/Orders'
-import Congrats from './pages/CongratulationsPage/Congrats'
+
 
 
 
@@ -34,7 +34,7 @@ const AppRoutes = () => {
           <Route path='/user' element={<UserProfile/>}/>
           <Route path='/verify' element={<Verify/>}/>
           <Route path='/myOrders' element={<Orders/>}/>
-          <Route path='/congratulations' element={<Congrats/>}/>
+          
 
 
           <Route
