@@ -34,10 +34,15 @@ const Form = () => {
           const shippingDetails = values
           
           const order = {price, shippingDetails, items}
-          await postOrder(order, currentUser)
+          try {
+            await postOrder(order, currentUser)
           actions.resetForm()
           dispatch(resetCart())
           useNavigate("/congratulations")
+          } catch (error) {
+            alert (error)
+          }
+          
       }}
         >
                 <StyledForm>
