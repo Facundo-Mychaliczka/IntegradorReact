@@ -7,7 +7,8 @@ import { INITIAL_VALUES_FORMIK, validationSchema } from './FormikData/FormikData
 import { useDispatch, useSelector } from 'react-redux'
 import { postOrder } from '../../../axios/axiosOrders'
 import { resetCart } from '../../../redux/cart/cartSlice'
-import { useNavigate } from 'react-router-dom'
+import { userRedirect } from '../../../hooks/userRedirect'
+
 
 
 const Form = () => {
@@ -19,7 +20,8 @@ const Form = () => {
           }, 0)
 
   const items = cartProducts
-  const navigate = useNavigate()
+  
+  
   return (
     <div>
         <h1>COMPLETA TU COMPRA</h1>
@@ -34,9 +36,7 @@ const Form = () => {
           await postOrder(order, currentUser)
           actions.resetForm()
           dispatch(resetCart())
-          navigate("/congratulations")
-          
-          
+          userRedirect("/congratulations")
       }}
         >
                 <StyledForm>
