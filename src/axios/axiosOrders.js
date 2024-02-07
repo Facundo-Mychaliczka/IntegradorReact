@@ -19,7 +19,7 @@ export const postOrder = async (order, currentUser)=> {
  export const getOrders = async (currentUser)=> {
 
      try {
-         const orders = await axios.get(`${BASE_URL}orders`,{
+         const response = await axios.get(`${BASE_URL}orders`,{
              headers: {
                  "xtoken": currentUser.token
              },
