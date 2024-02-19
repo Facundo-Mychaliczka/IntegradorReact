@@ -34,11 +34,6 @@ const Header = () => {
                 <NavLinkStyled to="/">Home</NavLinkStyled>
                 <NavLinkStyled to="/products">Productos</NavLinkStyled>
                 <NavLinkStyled to="/membership">Membresía</NavLinkStyled>
-                {
-                  currentUser? 
-                  <NavLinkStyled to="/myOrders">Mis Órdenes</NavLinkStyled>
-                  : ""
-                }
             </StyledOlHeader>
             <HeaderImgContainer>
                 <CartIcons onClick={() => dispatch(toggleHiddenCart())}>

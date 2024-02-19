@@ -1,5 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit'
-import { addQuantityItemToCart, cartHiddenVerification, deleteAllCartProducts, deleteItemFromCart, menuHiddenVerification, resetAllCartProducts, substractQuantityItemFromCart } from './cart-functions'
+import { addQuantityItemToCart, cartHiddenVerification, deleteAllCartProducts, deleteItemFromCart, menuHiddenVerification, substractQuantityItemFromCart } from './cart-functions'
 
 const INITIAL_STATE = {
     cartItems: [],

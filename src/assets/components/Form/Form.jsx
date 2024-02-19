@@ -33,8 +33,8 @@ const Form = () => {
           
           await postOrder(order, currentUser)
           actions.resetForm()
+          alert("¡Muchas gracias por su compra!")
           dispatch(resetCart())
-        
       }}
         >
                 <StyledForm>

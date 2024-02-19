@@ -18,3 +18,7 @@ export const OrderContainer = styled.div `
     padding-top: 10px;
     border-color: grey;
 `
+export const OrdersList = styled.ol `
+    border-radius: 2rem;
+    width: 60%;
+`
