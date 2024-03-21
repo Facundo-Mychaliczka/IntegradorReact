@@ -3,10 +3,24 @@ import styled from "styled-components";
 export const FooterStyled = styled.footer `
     display: flex;
     width: 100%;
-    flex-direction: row;
+    gap: 50px;
+    flex-direction: column;
     background-color: grey;
-    justify-content: space-evenly;
+    align-items: center;
     padding: 20px 0px 20px 0px;
+    @media screen and ( max-width : 577px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+`
+
+export const FooterDiv = styled.div `
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
     @media screen and ( max-width : 577px) {
         flex-direction: column;
         align-items: center;
@@ -54,5 +68,13 @@ export const Privacy = styled.div `
         border-left: 3px solid black;
         border-right: 3px solid black;
     }
+`
+
+export const StyledFooterP = styled.p `
+    color: #ff0000;
+    background-color: white;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
 `
 
